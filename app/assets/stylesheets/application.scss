@@ -1,5 +1,6 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+@import 'fonts';
 @import 'menu';
 @import 'static_pages';
 
@@ -8,6 +9,10 @@ html, body {
 }
 
 .user-interface {
+  h1, h2, h3, h4, p {
+    font-family: 'GothamBold';
+  }
+
   p {
     color: white;
   }
