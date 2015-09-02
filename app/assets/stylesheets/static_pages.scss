@@ -1,3 +1,76 @@
-// Place all the styles related to the static_pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.static {
+  background: #fcf3e9 asset_url('bg.jpg') no-repeat top center;
+  height: 100%;
+
+  .title {
+    color: black;
+  }
+}
+
+.home-page {
+
+  #juswee-logo {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 200px;
+  }
+
+  #presentation-text {
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+}
+
+.about-page {
+  > .container-fluid {
+    padding-top: 10px;
+
+    #about-content {
+      max-width: 80%;
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+}
+
+@media (min-width: $screen-sm-min) {
+  .about-page {
+    > .container-fluid {
+      padding-top: 50px;
+    }
+  }
+}
+
+@media (max-width: $screen-sm-max) {
+  .home-page {
+    .logo {
+      width: 250px;
+    }
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .home-page {
+    #juswee-logo {
+      margin-top: 100px;
+      text-align: left !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    #presentation-text {
+      text-align: left !important;
+    }
+
+    .logo {
+      margin-top: 200px;
+    }
+  }
+
+  .about-page {
+    > .container-fluid {
+      padding-top: 150px;
+    }
+  }
+}

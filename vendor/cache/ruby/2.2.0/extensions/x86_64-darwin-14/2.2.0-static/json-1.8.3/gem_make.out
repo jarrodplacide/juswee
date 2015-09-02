@@ -1,0 +1,9 @@
+/Users/royaltyclubvp/.rvm/rubies/ruby-2.2.1/bin/ruby -r ./siteconf20150831-53771-1kowbcl.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+make "DESTDIR=" install

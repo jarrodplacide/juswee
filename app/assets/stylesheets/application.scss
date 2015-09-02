@@ -1,0 +1,14 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'menu';
+@import 'static_pages';
+
+html, body {
+  height: 100%;
+}
+
+.user-interface {
+  p {
+    color: white;
+  }
+}

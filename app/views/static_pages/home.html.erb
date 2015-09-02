@@ -1,2 +1,21 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<%
+   @pagetitle = 'Welcome to Celebrating Wee Own | Carnival Presentation 2016'
+   @page_class = 'static home-page'
+%>
+
+<div class="container-fluid">
+  <div class="col-xs-12 col-sm-12 col-md-4">
+    <div id="juswee-logo" class="center-block text-center">
+      <%= image_tag 'juswee-logo.png', width: 400, alt: 'Jus Wee and Friends', class: 'img-responsive' %>
+    </div>
+    <div class="text text-center" id="presentation-text">
+      <p>Carnival 2016<br/>Presentation</p>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-4">
+    <div class="logo center-block text-center">
+      <%= image_tag 'wee-own-logo.png', width: 500, alt: 'Celebrating Wee Own', class: 'img-responsive' %>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
