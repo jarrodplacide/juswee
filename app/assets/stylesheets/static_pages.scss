@@ -22,7 +22,8 @@
   }
 }
 
-.about-page {
+.about-page,
+.contact-page {
   > .container-fluid {
     padding-top: 10px;
 
@@ -36,7 +37,8 @@
 }
 
 @media (min-width: $screen-sm-min) {
-  .about-page {
+  .about-page,
+  .contact-page {
     > .container-fluid {
       padding-top: 50px;
     }
