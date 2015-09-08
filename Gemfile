@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+require 'money-rails'
+require 'money/bank/google_currency'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -18,6 +20,17 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 
+# Use Carrierwave for Uploads
+gem 'fog'
+gem 'carrierwave'
+
+# Money Adapter for Active Record
+gem 'google_currency'
+gem 'money-rails'
+
+
+# Annotate Models
+gem 'annotate', '~> 2.6.10'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
