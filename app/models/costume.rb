@@ -7,16 +7,22 @@
 #  name       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  image      :string
+#  image_id   :string
+#  slug       :string           indexed
 #
 # Indexes
 #
 #  index_costumes_on_section_id  (section_id)
+#  index_costumes_on_slug        (slug) UNIQUE
 #
 
 class Costume < ActiveRecord::Base
+  # Pretty URLs using costume names
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
   # Image Uploader
-  mount_uploader :image, CostumeImageUploader
+  attachment :image
 
   # Belongs to a section
   belongs_to :section, inverse_of: :costumes

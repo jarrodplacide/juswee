@@ -1,0 +1,16 @@
+<%
+   @pagetitle = 'Sections for 2016'
+   @page_class = 'sections index'
+%>
+
+<div class="container-fluid">
+  <header class="text-center">
+    <%= image_tag 'wee-own-logo.png', width: 150, alt: 'Celebrating Wee Own Logo' %>
+    <h1 class="title">Sections for 2016</h1>
+  </header>
+  <div id="sections-content" class="content text-center center-block">
+    <div class="row">
+      <%= render @sections %>
+    </div>
+  </div>
+</div>

@@ -3,6 +3,9 @@
 @import 'fonts';
 @import 'menu';
 @import 'static_pages';
+@import 'sections';
+@import 'jquery.fancybox';
+@import 'jquery.fancybox-buttons';
 
 html, body {
   height: 100%;
@@ -23,5 +26,12 @@ html, body {
 
   a {
     color: inherit;
+  }
+
+  header {
+    .title {
+      color: black;
+      text-transform: uppercase;
+    }
   }
 }

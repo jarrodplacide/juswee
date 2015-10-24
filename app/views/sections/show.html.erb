@@ -1,0 +1,16 @@
+<%
+   @pagetitle = @section.section_name
+   @page_class = 'sections show'
+%>
+
+<div class="container-fluid">
+  <header class="text-center">
+    <%= image_tag 'wee-own-logo.png', alt: 'Celebrating Wee Own Logo' %>
+    <h1 class="title"><%= @section.section_name %></h1>
+  </header>
+  <div class="well well-sm content">
+    <div class="row">
+      <%= render partial: 'sections/costume', collection: @section.costumes %>
+    </div>
+  </div>
+</div>

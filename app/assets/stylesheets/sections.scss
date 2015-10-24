@@ -1,0 +1,88 @@
+// Place all the styles related to the sections controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.sections {
+  &.index {
+    background: #fcf3e9 asset_url('bg.jpg') no-repeat top center;
+    height: 100%;
+  }
+
+  > .container-fluid {
+    padding-top: 20px;
+
+    header {
+      > img {
+        width: 100px;
+      }
+    }
+
+    .content {
+      > .row {
+
+        > div {
+          position: relative;
+
+          .thumbnail {
+            width: 100%;
+          }
+
+          .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            .overlay-bg {
+              margin-top: 40%;
+              background: black;
+              height: 20px;
+              opacity: 0.7;
+            }
+
+            .section-title {
+              font-size: 14px;
+              color: white;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  > .row {
+    padding-left: 0;
+    padding-right: 0;
+
+    > div {
+      margin-left: 0;
+      margin-right: 0;
+
+      .thumbnail {
+        border: none;
+      }
+    }
+
+    .thumbnail {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .overlay {
+    display: none;
+
+    &:hover {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: $screen-sm-max) {
+}
+
+@media (min-width: $screen-md-min) {
+
+}

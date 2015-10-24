@@ -1,0 +1,14 @@
+<%
+   @pagetitle = "#{@costume.section.section_name}: #{@costume.name}"
+   @page_class = 'costumes show'
+%>
+
+<div class="container-fluid">
+  <header class="text-center">
+    <%= image_tag 'wee-own-logo.png', alt: 'Celebrating Wee Own Logo' %>
+    <h1 class="title"><%= @costume.section.section_name %>: <%= @costume.name %></h1>
+  </header>
+  <div class="content panel-group" id="costume-variants-container" role="tablist" aria-multiselectable="true">
+    <%= render partial: 'costumes/costume_variant', collection: @costume.costume_variants %>
+  </div>
+</div>

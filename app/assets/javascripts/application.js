@@ -13,3 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require jquery.fancybox
+//= require jquery.fancybox-buttons
+
+if((body).hasClass('costumes') && (body).hasClass('show')) {
+    $(document).ready(function() {
+        $('.fancybox').fancybox({
+
+        });
+    });
+}

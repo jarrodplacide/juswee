@@ -3,7 +3,7 @@
 # Table name: costume_variant_images
 #
 #  id                 :integer          not null, primary key
-#  file               :string
+#  file_id            :string
 #  description        :string
 #  costume_variant_id :integer          indexed
 #  created_at         :datetime         not null
@@ -16,7 +16,7 @@
 
 class CostumeVariantImage < ActiveRecord::Base
   # Image Uploader
-  mount_uploader :file, CostumeImageUploader
+  attachment :file
 
   # Belongs to a costume variant
   belongs_to :costume_variant, inverse_of: :costume_variant_images

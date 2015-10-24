@@ -1,9 +1,25 @@
+# == Route Map
+#
+#               Prefix Verb URI Pattern                                  Controller#Action
+#    static_pages_home GET  /static_pages/home(.:format)                 static_pages#home
+#   static_pages_about GET  /static_pages/about(.:format)                static_pages#about
+# static_pages_contact GET  /static_pages/contact(.:format)              static_pages#contact
+#      section_costume GET  /sections/:section_id/costumes/:id(.:format) costumes#show
+#             sections GET  /sections(.:format)                          sections#index
+#              section GET  /sections/:id(.:format)                      sections#show
+#           refile_app      /attachments                                 #<Refile::App app_file="/home/jarrod/.rvm/gems/ruby-2.2.1/gems/refile-0.6.1/lib/refile/app.rb">
+#
+
 Rails.application.routes.draw do
   get 'static_pages/home'
 
   get 'static_pages/about'
 
   get 'static_pages/contact'
+
+  resources :sections, only: [:index, :show] do
+    resources :costumes, only: [:show]
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

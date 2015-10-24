@@ -1,8 +1,5 @@
 source 'https://rubygems.org'
 
-require 'money-rails'
-require 'money/bank/google_currency'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use postgresql as the database for Active Record
@@ -20,13 +17,18 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 
-# Use Carrierwave for Uploads
-gem 'fog'
-gem 'carrierwave'
+# Use Refile for Uploads
+gem 'refile', require: 'refile/rails'
+gem 'refile-mini_magick'
+# Refile S3 Backend Adapter
+gem 'refile-s3'
 
 # Money Adapter for Active Record
 gem 'google_currency'
 gem 'money-rails'
+
+# Use Friendly ID for Slug Names
+gem 'friendly_id', '~> 5.1.0'
 
 
 # Annotate Models
