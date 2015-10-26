@@ -30,6 +30,8 @@ gem 'money-rails'
 # Use Friendly ID for Slug Names
 gem 'friendly_id', '~> 5.1.0'
 
+# Use Figaro for Environment Variables
+gem 'figaro'
 
 # Annotate Models
 gem 'annotate', '~> 2.6.10'

@@ -1,10 +1,10 @@
 aws = {
-    access_key_id: 'AKIAIBK5EUE6XE56CBZQ',
-    secret_access_key: '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',
+    access_key_id: ENV['access_key_id'],
+    secret_access_key: ENV['secret_access_key'],
     region: 'us-east-1',
-    bucket: 'juswee-development'
+    bucket: ENV['bucket']
 }
 Refile.cache = Refile::S3.new(prefix: 'cache', **aws)
 Refile.store = Refile::S3.new(prefix: 'store', **aws)
 
-Refile.cdn_host = 'http://localhost:3000'
+Refile.cdn_host = ENV['cdn_host']
